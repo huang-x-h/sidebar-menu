@@ -1,6 +1,8 @@
 # Sidebar Menu
 
-Sidebar Menu base `jQuery`
+Sidebar Menu jQuery Component base on [AdminLTE](https://github.com/almasaeed2010/AdminLTE)
+
+![](./screen.gif)
 
 ## Install
 
