@@ -1,0 +1,16 @@
+{
+  "name": "sidebar-menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sidebar-menu.js",
+  "scripts": {
+    
+  },
+  "keywords": [],
+  "author": "huang.xinghui <huang.x.hui@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
