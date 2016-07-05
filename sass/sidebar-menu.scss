@@ -64,6 +64,11 @@ $sidebar-menu-hover-border-color: #3c8dbc;
     }
   }
 
+  a {
+    color: $sidebar-menu-color;
+    text-decoration: none;
+  }
+
   // Tree view menu
   .treeview-menu {
     display: none;

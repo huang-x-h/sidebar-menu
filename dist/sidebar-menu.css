@@ -40,6 +40,9 @@
     transform: rotate(-90deg); }
   .sidebar-menu li.active > .treeview-menu {
     display: block; }
+  .sidebar-menu a {
+    color: #b8c7ce;
+    text-decoration: none; }
   .sidebar-menu .treeview-menu {
     display: none;
     list-style: none;
