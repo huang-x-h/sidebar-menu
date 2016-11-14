@@ -4,8 +4,8 @@ $sidebar-menu-hover-color: #fff;
 $sidebar-menu-hover-bg: darken($sidebar-menu-bg, 2%);
 $sidebar-menu-hover-border-color: #3c8dbc;
 $sidebar-menu-submenu-bg: lighten($sidebar-menu-bg, 5%);
-$sidebar-menu-submenu-color: lighten($sidebar-menu-submenu-bg, 40%);
-$sidebar-menu-submenu-hover-color: #fff;
+$sidebar-submenu-color: lighten($sidebar-menu-submenu-bg, 40%);
+$sidebar-submenu-hover-color: #fff;
 
 .sidebar-menu {
   list-style: none;
@@ -31,17 +31,13 @@ $sidebar-menu-submenu-hover-color: #fff;
       background: $sidebar-menu-hover-bg;
       border-left-color: $sidebar-menu-hover-border-color;
     }
-    > .treeview-menu {
-      margin: 0 1px;
-      background: $sidebar-menu-submenu-bg;
-    }
     .label,
     .badge {
       margin-top: 3px;
       margin-right: 5px;
     }
   }
-  li.header {
+  li.sidebar-header {
     padding: 10px 25px 10px 15px;
     font-size: 12px;
     color: lighten($sidebar-menu-bg, 20%);
@@ -58,7 +54,7 @@ $sidebar-menu-submenu-hover-color: #fff;
     > a > .fa-angle-left {
       transform: rotate(-90deg);
     }
-    > .treeview-menu {
+    > .sidebar-submenu {
       display: block;
     }
   }
@@ -69,21 +65,21 @@ $sidebar-menu-submenu-hover-color: #fff;
   }
 
   // Tree view menu
-  .treeview-menu {
+  .sidebar-submenu {
     display: none;
     list-style: none;
     padding-left: 5px;
-    margin: 0;
-    .treeview-menu {
+    margin: 0 1px;
+    background: $sidebar-menu-submenu-bg;
+    .sidebar-submenu {
       padding-left: 20px;
     }
     > li {
-      margin: 0;
       > a {
         padding: 5px 5px 5px 15px;
         display: block;
         font-size: 14px;
-        color: $sidebar-menu-submenu-color;
+        color: $sidebar-submenu-color;
         > .fa {
           width: 20px;
         }
@@ -93,7 +89,7 @@ $sidebar-menu-submenu-hover-color: #fff;
         }
       }
       &.active > a, > a:hover {
-        color: $sidebar-menu-submenu-hover-color;
+        color: $sidebar-submenu-hover-color;
       }
     }
   }

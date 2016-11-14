@@ -1,11 +1,12 @@
 $.sidebarMenu = function(menu) {
-  var animationSpeed = 300;
-  
+  var animationSpeed = 300,
+    subMenuSelector = '.sidebar-submenu';
+
   $(menu).on('click', 'li a', function(e) {
     var $this = $(this);
     var checkElement = $this.next();
 
-    if (checkElement.is('.treeview-menu') && checkElement.is(':visible')) {
+    if (checkElement.is(subMenuSelector) && checkElement.is(':visible')) {
       checkElement.slideUp(animationSpeed, function() {
         checkElement.removeClass('menu-open');
       });
@@ -13,7 +14,7 @@ $.sidebarMenu = function(menu) {
     }
 
     //If the menu is not visible
-    else if ((checkElement.is('.treeview-menu')) && (!checkElement.is(':visible'))) {
+    else if ((checkElement.is(subMenuSelector)) && (!checkElement.is(':visible'))) {
       //Get the parent menu
       var parent = $this.parents('ul').first();
       //Close all open menus within the parent
@@ -32,7 +33,7 @@ $.sidebarMenu = function(menu) {
       });
     }
     //if this isn't a link, prevent the page from being redirected
-    if (checkElement.is('.treeview-menu')) {
+    if (checkElement.is(subMenuSelector)) {
       e.preventDefault();
     }
   });
