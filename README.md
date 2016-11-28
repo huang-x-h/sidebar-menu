@@ -25,3 +25,9 @@ $.sidebarMenu(element)
 
 - `$.sidebarMenu(element)`
   - element element or jQuery element
+
+## Changelog
+
+### 2016/11/28
+
+add `.sidebar-menu-rtl` class for `rtl` direction
