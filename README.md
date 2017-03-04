@@ -4,6 +4,8 @@ Sidebar Menu jQuery Component base on [AdminLTE](https://github.com/almasaeed201
 
 <img src="screenshot.gif" width="384">
 
+**[Demo](https://huang-x-h.github.io/sidebar-menu/)** **[RTL Demo](https://huang-x-h.github.io/sidebar-menu/index-rtl.html)**
+
 ## Install
 
 ## Usage
