@@ -1,0 +1,135 @@
+@import "animate";
+
+$sidebar-menu-bg: #222d32;
+$sidebar-menu-color: lighten($sidebar-menu-bg, 60%);
+$sidebar-menu-hover-color: #fff;
+$sidebar-menu-hover-bg: darken($sidebar-menu-bg, 2%);
+$sidebar-menu-hover-border-color: #3c8dbc;
+$sidebar-menu-submenu-bg: lighten($sidebar-menu-bg, 5%);
+$sidebar-submenu-color: lighten($sidebar-menu-submenu-bg, 40%);
+$sidebar-submenu-hover-color: #fff;
+
+@mixin sidebar-menu($rtl:false) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: $sidebar-menu-bg;
+  //First Level
+  > li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    > a {
+      @if $rtl {
+        padding: 12px 15px 12px 5px;
+      }
+      @else {
+        padding: 12px 5px 12px 15px;
+      }
+      display: block;
+      border-left: 3px solid transparent;
+      color: $sidebar-menu-color;
+      > .fa {
+        width: 20px;
+      }
+    }
+    &:hover > a, &.active > a {
+      color: $sidebar-menu-hover-color;
+      background: $sidebar-menu-hover-bg;
+      border-left-color: $sidebar-menu-hover-border-color;
+    }
+    .label,
+    .badge {
+      margin-top: 3px;
+      margin-right: 5px;
+    }
+  }
+  li.sidebar-header {
+    @if $rtl {
+      padding: 10px 15px 10px 25px;
+    }
+    @else {
+      padding: 10px 25px 10px 15px;
+    }
+
+    font-size: 12px;
+    color: lighten($sidebar-menu-bg, 20%);
+    background: darken($sidebar-menu-bg, 4%);
+  }
+  li > a > .fa-angle-left {
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+  li.active {
+    > a > .fa-angle-left {
+      transform: rotate(-90deg);
+    }
+    > .sidebar-submenu {
+      display: block;
+    }
+  }
+
+  a {
+    color: $sidebar-menu-color;
+    text-decoration: none;
+  }
+
+  // Tree view menu
+  .sidebar-submenu {
+    display: none;
+    list-style: none;
+
+    @if $rtl {
+      padding-right: 5px;
+    }
+    @else {
+      padding-left: 5px;
+    }
+
+    margin: 0 1px;
+    background: $sidebar-menu-submenu-bg;
+    .sidebar-submenu {
+      @if $rtl {
+        padding-right: 20px;
+      }
+      @else {
+        padding-left: 20px;
+      }
+    }
+    > li {
+      > a {
+        @if $rtl {
+          padding: 5px 15px 5px 5px;
+        }
+        @else {
+          padding: 5px 5px 5px 15px;
+        }
+
+        display: block;
+        font-size: 14px;
+        color: $sidebar-submenu-color;
+        > .fa {
+          width: 20px;
+        }
+        > .fa-angle-left,
+        > .fa-angle-down {
+          width: auto;
+        }
+      }
+      &.active > a, > a:hover {
+        color: $sidebar-submenu-hover-color;
+      }
+    }
+  }
+}
+
+.sidebar-menu {
+  @include sidebar-menu;
+}
+
+.sidebar-menu-rtl {
+  @include sidebar-menu(true);
+}

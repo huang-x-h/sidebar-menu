@@ -1,0 +1,24 @@
+{
+  "name": "sidebar-menu",
+  "version": "0.1.0",
+  "description": "",
+  "main": "sidebar-menu.js",
+  "scripts": {
+    "buid": "gulp",
+    "build:watch": "gulp watch" 
+  },
+  "keywords": ["jquery", "component", "sidebar-menu"],
+  "author": "huang.xinghui <huang.x.hui@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huang-x-h/sidebar-menu.git"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}
