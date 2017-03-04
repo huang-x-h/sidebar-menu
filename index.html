@@ -6,11 +6,11 @@
   <title>Sidebar Menu Example</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./dist/sidebar-menu.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/huang-x-h/sidebar-menu/master/dist/sidebar-menu.css">
 </head>
 
 <body>
-  <section style="width: 200px">
+  <section class="animate-menu animate-menu-left">
     <ul class="sidebar-menu">
       <li class="sidebar-header">MAIN NAVIGATION</li>
       <li>
@@ -151,10 +151,27 @@
     </ul>
   </section>
 
+  <div class="container text-center">
+    <div class="btn-group-vertical">
+      <button id="showLeft" class="btn btn-primary">Show/Hide Left Sidebar Menu</button>
+      <button id="pushRight" class="btn btn-primary">Show/Hide Right Push Sidebar Menu</button>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-  <script src="./dist/sidebar-menu.js"></script>
+  <script src="https://cdn.rawgit.com/huang-x-h/sidebar-menu/master/dist/sidebar-menu.js"></script>
   <script>
     $.sidebarMenu($('.sidebar-menu'))
+
+    $('#showLeft').click(function () {
+      $('.animate-menu-left').toggleClass('animate-menu-open')
+    })
+
+    $('#pushRight').click(function () {
+      $('body').addClass('animate-menu-push');
+      $('body').toggleClass('animate-menu-push-right')
+      $('.animate-menu-left').toggleClass('animate-menu-open')
+    })
   </script>
 </body>
 
