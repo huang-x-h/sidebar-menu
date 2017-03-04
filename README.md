@@ -28,6 +28,10 @@ $.sidebarMenu(element)
 
 ## Changelog
 
+### 2017/03/04
+
+add `_animate.scss` to show or hide the SidebarMenu, usage see animate.html
+
 ### 2016/11/28
 
 add `.sidebar-menu-rtl` class for `rtl` direction
